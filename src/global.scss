@@ -1,0 +1,39 @@
+// variables
+
+$primary-color: 2c3e50;
+$pink: pink;
+$main-font: Helvetica, Arial, sans-serif;
+$tablet: 800px;
+$mobile: 500px;
+
+// Media query sizes
+
+@mixin tablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+// common mix-ins
+
+@mixin flex($content: false, $items: false, $direction: false) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @if $direction {
+    flex-direction: $direction;
+  }
+  @if $content {
+    justify-content: $content;
+  }
+  @if $items {
+    align-items: $items;
+  }
+}
