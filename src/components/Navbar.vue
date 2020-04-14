@@ -4,10 +4,15 @@
       <router-link class="navbar__item" to="/">Caio Ingber</router-link>
     </div>
     <div class="navbar__links">
-      <a href="/assets/CaioIngber_Resume.pdf" target="_blank">Resume</a>
-      <router-link class="navbar__item" to="/about">About</router-link>
-      <router-link class="navbar__item" to="/projects">Projects</router-link>
-      <router-link class="navbar__item" to="/contact">Contact</router-link>
+      <a
+        href="/assets/CaioIngber_Resume.pdf"
+        target="_blank"
+        class="navbar__resume"
+        >Resume</a
+      >
+      <router-link to="/about">About</router-link>
+      <router-link to="/projects">Projects</router-link>
+      <router-link to="/contact">Contact</router-link>
     </div>
   </nav>
 </template>
@@ -21,7 +26,7 @@ export default {
 <style lang="scss" scoped>
 @import "../global.scss";
 .navbar {
-  @include flex(space-between);
+  @include flex(space-between, center);
   height: 100px;
   font-size: map-get($font-sizes, medium);
   font-weight: 500;
