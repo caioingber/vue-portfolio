@@ -1,13 +1,23 @@
 // variables
 
-$primary-color: 2c3e50;
+$primary-color: #2c3e50;
+$underline-color: #42a7b9;
+$active-color: #42b950;
 $pink: pink;
 $main-font: Helvetica, Arial, sans-serif;
 $tablet: 800px;
 $mobile: 500px;
-
+$margins: (
+  "small": 1rem,
+  "medium": 1.5rem,
+  "large": 2rem
+);
+$font-sizes: (
+  "small": 15px,
+  "medium": 25px,
+  "large": 50px
+);
 // Media query sizes
-
 @mixin tablet {
   @media (max-width: $tablet) {
     @content;

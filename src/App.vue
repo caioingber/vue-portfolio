@@ -1,10 +1,6 @@
 <template>
   <div id="app">
     <navbar />
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
     <router-view />
   </div>
 </template>
@@ -23,6 +19,10 @@ export default {
   box-sizing: border-box;
   margin: 0;
   font-family: $main-font;
+}
+
+a {
+  cursor: pointer;
 }
 
 #app {

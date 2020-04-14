@@ -4,7 +4,7 @@
       <router-link class="navbar__item" to="/">Caio Ingber</router-link>
     </div>
     <div class="navbar__links">
-      <router-link class="navbar__item" to="/">Resume</router-link>
+      <a href="/assets/CaioIngber_Resume.pdf" target="_blank">Resume</a>
       <router-link class="navbar__item" to="/about">About</router-link>
       <router-link class="navbar__item" to="/projects">Projects</router-link>
       <router-link class="navbar__item" to="/contact">Contact</router-link>
@@ -21,14 +21,33 @@ export default {
 <style lang="scss" scoped>
 @import "../global.scss";
 .navbar {
-  @include flex(space-around);
+  @include flex(space-between);
   height: 100px;
-  &__item {
-  }
-
-  .router-link-active {
+  font-size: map-get($font-sizes, medium);
+  font-weight: 500;
+  a {
     color: $primary-color;
     text-decoration: none;
+    padding-bottom: 3px;
+
+    &:hover {
+      color: $underline-color;
+      border-bottom: 1px solid $underline-color;
+      transition: 0.3s;
+    }
+    &.router-link-exact-active {
+      color: $active-color;
+      border-bottom: 2px solid $active-color;
+    }
+  }
+  &__name {
+    margin-left: map-get($margins, large);
+  }
+  &__links {
+    margin-right: map-get($margins, large);
+    a {
+      margin: 0 map-get($margins, small);
+    }
   }
 }
 </style>
