@@ -18,8 +18,12 @@
     </div>
     <div class="projects__nav">
       <button @click="goToPrev">prev</button>
-      <span v-for="(project, index) in projects" :key="index">
-        {{ index + 1 }}
+      <span
+        v-for="(project, index) in projects"
+        :key="index"
+        @click="jump(index)"
+        :class="[index === currentIndex ? 'active' : null]"
+      >
       </span>
       <button @click="goToNext">next</button>
     </div>
@@ -95,6 +99,9 @@ export default {
         this.currentIndex--;
       }
       console.log(this.currentIndex);
+    },
+    jump(i) {
+      this.currentIndex = i;
     }
   }
 };
@@ -117,6 +124,17 @@ export default {
   }
   &__nav {
     @include flex(center, center, row);
+    span {
+      cursor: pointer;
+      margin: map-get($margins, small);
+      width: 10px;
+      height: 10px;
+      border-radius: 100%;
+      border: 1px solid $primary-color;
+    }
+    .active {
+      background-color: $primary-color;
+    }
   }
 }
 </style>
