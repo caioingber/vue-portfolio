@@ -1,5 +1,5 @@
 <template>
-  <div class="projects">
+  <div class="projects" @keyup="nextProject">
     <h1>Projects</h1>
     <div class="projects__container">
       <div
@@ -17,7 +17,7 @@
       </div>
     </div>
     <div class="projects__nav">
-      <button @click="goToPrev">prev</button>
+      <button @click="nextProject">prev</button>
       <span
         v-for="(project, index) in projects"
         :key="index"
@@ -25,7 +25,7 @@
         :class="[index === currentIndex ? 'active' : null]"
       >
       </span>
-      <button @click="goToNext">next</button>
+      <button @click="nextProject">next</button>
     </div>
   </div>
 </template>
@@ -44,7 +44,7 @@ export default {
           title: "Black Light Aquarium",
           description: "Description goes Here",
           stack: "Tech | Goes | Here",
-          image: "Image goes here"
+          image: "https://i.imgur.com/7jqjeph.png"
         },
         {
           title: "BBC News Modal",
@@ -87,18 +87,26 @@ export default {
       return this.currentIndex * this.singleWidth * 2;
     }
   },
+  mounted() {
+    document.addEventListener("keyup", this.nextProject);
+  },
   methods: {
-    goToNext() {
-      if (this.currentIndex < this.projects.length - 1) {
-        this.currentIndex++;
+    nextProject(e) {
+      console.log(e);
+      if (e.keyCode == 37 || e.target.innerHTML == "prev") {
+        if (this.currentIndex <= 0) {
+          this.currentIndex = this.projects.length - 1;
+        } else {
+          this.currentIndex--;
+        }
       }
-      console.log(this.currentIndex);
-    },
-    goToPrev() {
-      if (this.currentIndex > 0) {
-        this.currentIndex--;
+      if (e.keyCode == 39 || e.target.innerHTML == "next") {
+        if (this.currentIndex >= this.projects.length - 1) {
+          this.currentIndex = 0;
+        } else {
+          this.currentIndex++;
+        }
       }
-      console.log(this.currentIndex);
     },
     jump(i) {
       this.currentIndex = i;
