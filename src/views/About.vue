@@ -5,7 +5,7 @@
 </template>
 
 <style lang="scss" scoped>
-.class {
-  transition: 0.5s;
+.about {
+  transition: 3s;
 }
 </style>

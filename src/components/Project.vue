@@ -1,8 +1,8 @@
 <template>
   <div class="project">
-    <h3>{{ project.title }}</h3>
-    <p>{{ project.description }}</p>
-    <p>{{ project.stack }}</p>
+    <h3 class="project__title">{{ project.title }}</h3>
+    <p class="project__description">{{ project.description }}</p>
+    <p class="project__stack">{{ project.stack }}</p>
     <img :src="project.image" />
   </div>
 </template>
@@ -16,6 +16,6 @@ export default {
 
 <style lang="scss" scoped>
 .project {
-  min-width: 400px;
+  min-width: 100vw;
 }
 </style>
