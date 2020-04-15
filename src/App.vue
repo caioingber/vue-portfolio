@@ -21,6 +21,11 @@ export default {
   font-family: $main-font;
 }
 
+.fa-icon {
+  width: auto;
+  height: 3rem; /* or any other relative font sizes */
+}
+
 a {
   cursor: pointer;
 }

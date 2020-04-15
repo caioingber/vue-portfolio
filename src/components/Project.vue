@@ -1,12 +1,11 @@
 <template>
   <div class="container">
-    {{ props }}
+    <h3 class="project__title">{{ project.title }}</h3>
     <div class="project" @mouseenter="hoverProject" @mouseleave="hoverProject">
       <div v-if="active">
         <img :src="project.image" />
       </div>
       <div v-else>
-        <h3 class="project__title">{{ project.title }}</h3>
         <p class="project__description">{{ project.description }}</p>
         <p class="project__stack">{{ project.stack }}</p>
       </div>
@@ -47,7 +46,7 @@ export default {
 @import "../global.scss";
 .container {
   min-width: 100vw;
-  @include flex(center, center, row);
+  @include flex(center, center, column);
 }
 .project {
   @include flex(center, center, column);
@@ -58,7 +57,6 @@ export default {
   background-repeat: no-repeat;
 
   img {
-    transition: 1s;
     height: 100%;
     width: 100%;
   }

@@ -3,7 +3,7 @@
     <div class="navbar__name ">
       <router-link class="navbar__item" to="/">Caio Ingber</router-link>
     </div>
-    <div class="navbar__links">
+    <div class="navbar__links" :style="{}">
       <a
         href="/assets/CaioIngber_Resume.pdf"
         target="_blank"
@@ -87,7 +87,7 @@ export default {
       margin: 20px 0 30px 20px;
     }
     &__links {
-      @include flex(center, flex-start, column);
+      @include flex(flex-start, flex-start, column);
     }
     &__ham {
       display: block;
