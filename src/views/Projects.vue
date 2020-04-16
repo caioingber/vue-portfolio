@@ -13,7 +13,7 @@
             class="projects__slider"
             :style="{
               width: singleWidth + 'vw',
-              marginLeft: '-' + slidesLeft + 'vw'
+              marginLeft: '-' + slidesLeft + 'vw',
             }"
           >
             <project
@@ -59,40 +59,52 @@ export default {
         {
           title: "Black Light Aquarium",
           description: "Description goes Here",
-          stack: "Tech | Goes | Here",
-          image: "https://i.imgur.com/7jqjeph.png"
+          stack: ["brands/html5", "brands/css3"],
+          image: "https://i.imgur.com/7jqjeph.png",
+          repo: "https://github.com/caioingber/website-mockup/",
+          deployed: "https://caioingber.github.io/website-mockup/index.html",
         },
         {
           title: "BBC News Modal",
           description: "Description goes Here",
-          stack: "Tech | Goes | Here",
-          image: "Image goes here"
+          stack: ["brands/html5", "brands/css3-alt", "brands/js"],
+          image: "https://i.imgur.com/XXmX6lK.png",
+          repo: "https://github.com/caioingber/bbc-news-modal",
+          deployed: "https://caioingber.github.io/bbc-news-modal/",
         },
         {
           title: "SimonJS",
           description: "Description goes Here",
-          stack: "Tech | Goes | Here",
-          image: "Image goes here"
+          stack: ["brands/html5", "brands/css3", "brands/js"],
+          image: "https://i.imgur.com/HDY3jdw.png",
+          repo: "https://github.com/caioingber/simon-says",
+          deployed: "https://caioingber.github.io/simon-says/",
         },
         {
           title: "Python Contact Book",
           description: "Description goes Here",
-          stack: "Tech | Goes | Here",
-          image: "Image goes here"
+          stack: ["brands/python"],
+          image: "https://i.imgur.com/VFtsF4l.png",
+          repo: "https://github.com/caioingber/python-contact-book",
+          deployed: null,
         },
         {
           title: "Eco Country Report Card",
           description: "Description goes Here",
-          stack: "Tech | Goes | Here",
-          image: "Image goes here"
+          stack: ["brands/react", "brands/node"],
+          image: "https://i.imgur.com/7oG6Asa.png",
+          repo: "https://github.com/caioingber/frontend-mern",
+          deployed: "https://eco-report-card.netlify.com/",
         },
         {
           title: "Recipe Rolodex",
           description: "Description goes Here",
-          stack: "Tech | Goes | Here",
-          image: "Image goes here"
-        }
-      ]
+          stack: ["brands/react", "brands/node"],
+          image: "https://i.imgur.com/SAMi7Xx.png",
+          repo: "https://github.com/colleenobrien3/group-mern-frontend",
+          deployed: "https://recipe-rolodex.netlify.app/",
+        },
+      ],
     };
   },
   computed: {
@@ -101,7 +113,7 @@ export default {
     },
     slidesLeft() {
       return this.currentIndex * this.singleWidth * 2;
-    }
+    },
   },
   mounted() {
     document.addEventListener("keyup", this.nextProject);
@@ -140,8 +152,8 @@ export default {
     },
     jump(i) {
       this.currentIndex = i;
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -154,10 +166,12 @@ export default {
     position: relative;
     cursor: pointer;
     height: 1rem;
+    margin: 10px;
+    transition: 0.5s;
+
     &:hover {
-      height: 1.5rem;
-      width: auto;
-      transition: 0.2s;
+      transform: scale(1.5);
+      transition: 0.5s;
     }
   }
   .previous {
@@ -168,20 +182,20 @@ export default {
   }
   @include flex(center, center, row);
   &__container {
-    height: 60vh;
+    margin-bottom: 30px;
     width: 100vw;
     overflow: hidden;
     @include flex(center, center);
   }
   &__slider {
     display: flex;
-    transition: ease-out 1s;
+    transition: 1s ease-out;
   }
   &__nav {
     @include flex(center, center, row);
     span {
       cursor: pointer;
-      margin: map-get($margins, small);
+      margin: 1rem;
       width: 10px;
       height: 10px;
       border-radius: 100%;
@@ -193,7 +207,14 @@ export default {
   }
   @include tablet {
     &__slider {
-      transition: 0.5s;
+      transition: 0.5s ease-out;
+    }
+    .previous,
+    .next {
+      height: 1.5rem;
+      &:hover {
+        transform: scale(1);
+      }
     }
   }
 }
