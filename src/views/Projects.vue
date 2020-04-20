@@ -33,6 +33,7 @@
         >
         </span>
       </div>
+      <contact></contact>
     </div>
     <v-icon
       @click="nextProject"
@@ -44,13 +45,14 @@
 </template>
 
 <script>
+import Contact from "../components/Contact";
 import Project from "../components/Project";
 import "vue-awesome/icons/angle-double-right";
 import "vue-awesome/icons/angle-double-left";
 import Icon from "vue-awesome/components/Icon";
 export default {
   name: "Projects",
-  components: { Project, "v-icon": Icon },
+  components: { Contact, Project, "v-icon": Icon },
   data() {
     return {
       currentIndex: 0,

@@ -4,16 +4,22 @@
     <h2>Software Engineer</h2>
     <div class="home__links">
       <router-link to="/about">About Me</router-link>
+      <a
+        href="/assets/CaioIngber_Resume.pdf"
+        target="_blank"
+        class="navbar__resume"
+        >Resume</a
+      >
     </div>
+    <contact></contact>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-
+import Contact from "../components/Contact";
 export default {
   name: "Home",
-  components: {},
+  components: { Contact },
 };
 </script>
 

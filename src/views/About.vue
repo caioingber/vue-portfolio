@@ -1,7 +1,10 @@
 <template>
   <div class="about">
-    <img src="../pictures/GA13Feb_Linked-5.jpg" alt="" />
-    <div class="about__container">
+    <div class="about__left">
+      <img src="../pictures/GA13Feb_Linked-5.jpg" alt="" />
+      <contact></contact>
+    </div>
+    <div class="about__right">
       <div class="about__info">
         <h3>About Me</h3>
         <p>
@@ -28,7 +31,10 @@
 </template>
 
 <script>
-export default {};
+import Contact from "../components/Contact";
+export default {
+  components: { Contact },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -43,7 +49,10 @@ export default {};
     border-radius: 100%;
     margin-right: 2rem;
   }
-  &__container {
+  &__left {
+    @include flex(center, flex-start, column);
+  }
+  &__right {
     @include flex(center, flex-start, column);
     width: 50%;
     p {

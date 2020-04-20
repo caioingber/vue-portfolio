@@ -4,15 +4,14 @@
       <router-link class="navbar__item" to="/">Caio Ingber</router-link>
     </div>
     <div class="navbar__links" :style="{}">
+      <router-link to="/about">About</router-link>
+      <router-link to="/projects">Projects</router-link>
       <a
         href="/assets/CaioIngber_Resume.pdf"
         target="_blank"
         class="navbar__resume"
         >Resume</a
       >
-      <router-link to="/about">About</router-link>
-      <router-link to="/projects">Projects</router-link>
-      <router-link to="/contact">Contact</router-link>
     </div>
     <div v-if="navOpen" class="navbar__ham" @click="toggle">x</div>
     <div v-else class="navbar__ham" @click="toggle">=</div>
@@ -24,14 +23,14 @@ export default {
   name: "Navbar",
   data() {
     return {
-      navOpen: false
+      navOpen: false,
     };
   },
   methods: {
     toggle() {
       this.navOpen = !this.navOpen;
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -83,7 +82,7 @@ export default {
 }
 @include tablet {
   .open {
-    height: 250px;
+    height: 200px;
     transition: 0.5s;
   }
   .navbar {
