@@ -21,7 +21,7 @@ export default {
 @import "../global.scss";
 
 .home {
-  margin: 5rem 0 0 15rem;
+  margin: 5rem 0 0 20%;
   @include flex(center, flex-start, column);
   justify-self: center;
   h1,
