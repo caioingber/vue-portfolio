@@ -4,8 +4,8 @@
       <img src="../pictures/GA13Feb_Linked-5.jpg" alt="" />
       <contact></contact>
     </div>
-    <div class="about__right">
-      <div class="about__info">
+    <div class="about__container">
+      <div class="about__right">
         <h3>About Me</h3>
         <p>
           I am a highly-motivated and self-starting Full Stack Software Engineer
@@ -49,10 +49,7 @@ export default {
     border-radius: 100%;
     margin-right: 2rem;
   }
-  &__left {
-    @include flex(center, flex-start, column);
-  }
-  &__right {
+  &__container {
     @include flex(center, flex-start, column);
     width: 50%;
     p {

@@ -82,7 +82,7 @@ export default {
 }
 @include tablet {
   .open {
-    height: 200px;
+    height: 250px;
     transition: 0.5s;
   }
   .navbar {
