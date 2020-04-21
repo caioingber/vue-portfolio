@@ -30,6 +30,7 @@ export default {
   h1,
   h2 {
     font-weight: 300;
+    text-align: left;
   }
 
   h1 {
@@ -40,6 +41,21 @@ export default {
     font-size: 2rem;
     margin-bottom: 1.5rem;
     margin-left: 1rem;
+  }
+  &__links {
+    margin-left: 1rem;
+  }
+}
+
+@include mobile {
+  .home {
+    margin: 5rem 0 0 10%;
+    h1 {
+      font-size: 3rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
   }
 }
 </style>

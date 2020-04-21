@@ -4,8 +4,8 @@
       <img src="../pictures/GA13Feb_Linked-5.jpg" alt="" />
       <contact></contact>
     </div>
-    <div class="about__container">
-      <div class="about__right">
+    <div class="about__right">
+      <div class="about__content">
         <h3>About Me</h3>
         <p>
           I am a highly-motivated and self-starting Full Stack Software Engineer
@@ -17,11 +17,16 @@
       </div>
       <div class="about__skills">
         <h3>Skills</h3>
-        <p><em>Front-end</em>: HTML/CSS, Sass, Javascript, React, Vue</p>
         <p>
-          <em>Back-end</em>: Node, Express, Python, Django, MongoDB, PostgreSQL
+          <strong>Front-end:</strong> HTML/CSS, Sass, Javascript, React, Vue
         </p>
-        <p><em>Management/Deployment</em>: Git, Heroku, NPM, Pip/Pipenv</p>
+        <p>
+          <strong>Back-end:</strong> Node, Express, Python, Django, MongoDB,
+          PostgreSQL
+        </p>
+        <p>
+          <strong>Management/Deployment:</strong> Git, Heroku, NPM, Pip/Pipenv
+        </p>
       </div>
       <div class="about__links">
         <router-link to="/projects" class="button">Projects</router-link>
@@ -49,17 +54,35 @@ export default {
     border-radius: 100%;
     margin-right: 1rem;
   }
-  &__container {
+
+  &__right {
     @include flex(center, flex-start, column);
-    width: 50%;
+    width: 40%;
     p {
       text-align: justify;
-      margin-bottom: 1rem;
-      // margin-bottom: 2rem;
+      line-height: 1.5;
+      // margin-bottom: 1rem;
+    }
+    h3 {
+      font-size: map-get($font-sizes, medium);
+      font-weight: 300;
+      text-align: left;
+      margin: 2rem 0 0.5rem 0;
     }
   }
   &__links {
     margin: 2rem 0;
+  }
+}
+@include tablet {
+  .about {
+    @include flex(center, center, column);
+    &__right {
+      width: 80%;
+    }
+    &__links {
+      align-self: center;
+    }
   }
 }
 </style>
