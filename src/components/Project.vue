@@ -6,14 +6,9 @@
       <div class="project__background" :class="{ project__show: active }"></div>
       <div class="project__content">
         <p class="project__description">{{ project.description }}</p>
-        <div class="project__stack">
-          <v-icon
-            v-for="(tech, index) in project.stack"
-            :key="index"
-            :name="tech"
-            class="project__icon alert"
-          />
-        </div>
+        <p class="project__stack">
+          {{ project.stack }}
+        </p>
         <div>
           <a :href="project.repo" target="_blank">
             <v-icon name="brands/github-square" class="project__link" />
@@ -88,14 +83,17 @@ export default {
     top: -100%;
     height: 100%;
     width: 100%;
-    transition: 0.4s linear;
+    transition: 0.3s linear;
   }
   &__show {
     transform: translateY(100%);
-    transition: 0.4s linear;
+    transition: 0.3s linear;
   }
   @include flex(center, center, column);
-
+  p {
+    width: 50%;
+    margin-bottom: 20px;
+  }
   &__content {
     @include flex(center, center, column);
     height: 100%;
@@ -107,8 +105,8 @@ export default {
       transition: 0.5s;
     }
   }
-  &__stack {
-    @include flex(center, center, row);
+  &__description {
+    font-size: 20px;
   }
   svg {
     transform: scale(0.6);
