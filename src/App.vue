@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <navbar />
-    <router-view />
+    <transition name="slide" mode="out-in"> <router-view /> </transition>
   </div>
 </template>
 
@@ -29,6 +29,17 @@ export default {
 a {
   cursor: pointer;
   color: $primary-color;
+}
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: opacity 0.6s, transform 0.6s;
+}
+
+.slide-enter,
+.slide-leave-to {
+  opacity: 0;
+  transform: translateX(-40%);
 }
 
 #app {
