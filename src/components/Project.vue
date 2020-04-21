@@ -38,9 +38,6 @@ export default {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       },
-      hoverStyle: {
-        transform: `translateY(300px)`,
-      },
     };
   },
   methods: {
@@ -63,6 +60,17 @@ export default {
     font-weight: 300;
   }
 }
+
+@include large-only {
+  .faded {
+    transform: scale(1.2);
+  }
+  .project__show {
+    transform: translateY(100%);
+    transition: 0.3s linear;
+  }
+}
+
 .project {
   border-radius: 10px;
   margin: 40px 0;
@@ -71,9 +79,7 @@ export default {
   height: 350px;
   width: 500px;
   box-shadow: rgba(52, 43, 43, 0.55) 1px 2px 1px 2px;
-  .faded {
-    transform: scale(1.2);
-  }
+
   img {
     transition: 0.4s ease-in-out;
     width: 100%;
@@ -81,16 +87,13 @@ export default {
   }
   &__background {
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.892);
+    background-color: rgba(255, 255, 255, 0.769);
     top: -100%;
     height: 100%;
     width: 100%;
     transition: 0.3s linear;
   }
-  &__show {
-    transform: translateY(100%);
-    transition: 0.3s linear;
-  }
+
   @include flex(center, center, column);
   p {
     width: 75%;
@@ -125,6 +128,31 @@ export default {
     &:hover {
       transform: scale(0.7);
       transition: 0.1s ease-in;
+    }
+  }
+}
+
+@include tablet {
+  .project {
+    height: 250px;
+    width: 400px;
+    &__background {
+      top: 0;
+    }
+    &__content {
+      opacity: 1;
+      transition: 0.5s;
+    }
+  }
+}
+@include mobile {
+  .project {
+    width: 250px;
+    height: 300px;
+  }
+  .container {
+    .title {
+      font-size: 30px;
     }
   }
 }
