@@ -94,7 +94,7 @@ export default {
         {
           title: "Python Contact Book",
           description: "A Python command line app for storing contacts.",
-          stack: "Python",
+          stack: "Python | PostgreSQL",
           image: "https://i.imgur.com/VFtsF4l.png",
           repo: "https://github.com/caioingber/python-contact-book",
           deployed: null,

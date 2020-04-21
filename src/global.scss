@@ -10,12 +10,12 @@ $mobile: 500px;
 $margins: (
   "small": 1rem,
   "medium": 1.5rem,
-  "large": 2rem
+  "large": 2rem,
 );
 $font-sizes: (
   "small": 15px,
   "medium": 25px,
-  "large": 50px
+  "large": 50px,
 );
 // Media query sizes
 @mixin tablet {
@@ -45,5 +45,22 @@ $font-sizes: (
   }
   @if $items {
     align-items: $items;
+  }
+}
+
+// classes
+
+.button {
+  margin-top: 2rem;
+  text-decoration: none;
+  padding: 10px;
+  border: 1px solid $primary-color;
+  transition: 0.1s ease-out;
+  margin-left: 1rem;
+  border-radius: 5%;
+  &:hover {
+    color: #fff;
+    background-color: $primary-color;
+    transition: 0.1s ease-in;
   }
 }

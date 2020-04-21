@@ -59,6 +59,8 @@ export default {
   @include flex(center, center, column);
   .title {
     margin-top: 50px;
+    font-size: 40px;
+    font-weight: 300;
   }
 }
 .project {
@@ -79,7 +81,7 @@ export default {
   }
   &__background {
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.837);
+    background-color: rgba(255, 255, 255, 0.892);
     top: -100%;
     height: 100%;
     width: 100%;
@@ -91,8 +93,16 @@ export default {
   }
   @include flex(center, center, column);
   p {
-    width: 50%;
+    width: 75%;
     margin-bottom: 20px;
+  }
+  &__description {
+    text-align: left;
+    font-size: 20px;
+  }
+  &__stack {
+    font-size: 16px;
+    font-weight: 600;
   }
   &__content {
     @include flex(center, center, column);
@@ -105,18 +115,16 @@ export default {
       transition: 0.5s;
     }
   }
-  &__description {
-    font-size: 20px;
-  }
+
   svg {
     transform: scale(0.6);
   }
   &__link {
     cursor: pointer;
-    transition: 0.2s ease-out;
+    transition: 0.1s ease-out;
     &:hover {
       transform: scale(0.7);
-      transition: 0.2s ease-in;
+      transition: 0.1s ease-in;
     }
   }
 }

@@ -24,7 +24,7 @@
         <p><em>Management/Deployment</em>: Git, Heroku, NPM, Pip/Pipenv</p>
       </div>
       <div class="about__links">
-        <router-link to="/projects">Projects</router-link>
+        <router-link to="/projects" class="button">Projects</router-link>
       </div>
     </div>
   </div>
@@ -47,7 +47,7 @@ export default {
     height: 225px;
     width: 225px;
     border-radius: 100%;
-    margin-right: 2rem;
+    margin-right: 1rem;
   }
   &__container {
     @include flex(center, flex-start, column);
@@ -60,19 +60,6 @@ export default {
   }
   &__links {
     margin: 2rem 0;
-    a {
-      margin-top: 2rem;
-      text-decoration: none;
-      padding: 10px;
-      border: 1px solid $primary-color;
-      transition: 0.25s ease-out;
-      margin-left: 1rem;
-      &:hover {
-        color: #fff;
-        background-color: $primary-color;
-        transition: 0.25s ease-in;
-      }
-    }
   }
 }
 </style>

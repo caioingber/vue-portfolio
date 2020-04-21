@@ -3,11 +3,8 @@
     <h1>Caio Ingber</h1>
     <h2>Software Engineer</h2>
     <div class="home__links">
-      <router-link to="/about">About Me</router-link>
-      <a
-        href="/assets/CaioIngber_Resume.pdf"
-        target="_blank"
-        class="navbar__resume"
+      <router-link to="/about" class="button">About Me</router-link>
+      <a href="/assets/Resume_Portfolio.pdf" target="_blank" class="button"
         >Resume</a
       >
     </div>
@@ -43,18 +40,6 @@ export default {
     font-size: 2rem;
     margin-bottom: 1.5rem;
     margin-left: 1rem;
-  }
-  a {
-    text-decoration: none;
-    padding: 10px;
-    border: 1px solid $primary-color;
-    transition: 0.25s ease-out;
-    margin-left: 1rem;
-    &:hover {
-      color: #fff;
-      background-color: $primary-color;
-      transition: 0.25s ease-in;
-    }
   }
 }
 </style>

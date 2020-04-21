@@ -30,11 +30,11 @@ export default {
     margin: 0 8px;
   }
   svg {
-    transform: scale(0.8);
-    transition: 0.2s ease-out;
+    transform: scale(0.75);
+    transition: 0.1s ease-out;
     &:hover {
       transform: scale(0.9);
-      transition: 0.2s ease-in;
+      transition: 0.1s ease-in;
     }
   }
 }

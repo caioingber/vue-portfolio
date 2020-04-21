@@ -7,7 +7,7 @@
       <router-link to="/about">About</router-link>
       <router-link to="/projects">Projects</router-link>
       <a
-        href="/assets/CaioIngber_Resume.pdf"
+        href="/assets/Resume_Portfolio.pdf"
         target="_blank"
         class="navbar__resume"
         >Resume</a
@@ -49,15 +49,13 @@ export default {
     transition: 0.2s ease-out;
 
     &:hover {
-      text-shadow: -0.5px -0.5px 0 $primary-color, 0.5px -0.5px 0 $primary-color,
-        -0.5px 1px 0 $primary-color, 0.5px 0.5px 0 $primary-color;
+      text-shadow: -0.5px -0.5px 0 $primary-color;
       border-bottom: 1px solid $primary-color;
-      transition: 0.2s ease-in;
+      transition: 0.1s ease-in;
     }
     &.router-link-exact-active {
       &:hover {
-        text-shadow: -0.5px -0.5px 0 $active-color, 0.5px -0.5px 0 $active-color,
-          -0.5px 1px 0 $active-color, 0.5px 0.5px 0 $active-color;
+        text-shadow: -0.5px -0.5px 0 $active-color;
       }
       color: $active-color;
       border-bottom: 2px solid $active-color;
