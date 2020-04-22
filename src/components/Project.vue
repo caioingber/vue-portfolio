@@ -43,7 +43,6 @@ export default {
   methods: {
     hoverProject() {
       this.active = !this.active;
-      console.log(this.active);
     },
   },
 };

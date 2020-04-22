@@ -134,19 +134,25 @@ export default {
       }
     },
     nextProject(e) {
+      let val;
       e.preventDefault();
-      console.log(e);
-      if (e.type == "click") {
-        this.currentIndex++;
+      if (e.type === "click") {
+        if (e.toElement.tagName === "svg") {
+          val = e.target.className.baseVal;
+        }
+        if (e.toElement.tagName === "path") {
+          val = e.toElement.viewportElement.className.baseVal;
+        }
       }
-      if (e.keyCode == 37) {
+      console.log(val);
+      if (e.keyCode == 37 || val === "previous fa-icon") {
         if (this.currentIndex <= 0) {
           this.currentIndex = this.projects.length - 1;
         } else {
           this.currentIndex--;
         }
       }
-      if (e.keyCode == 39) {
+      if (e.keyCode == 39 || val === "next fa-icon") {
         if (this.currentIndex >= this.projects.length - 1) {
           this.currentIndex = 0;
         } else {
@@ -183,6 +189,10 @@ export default {
   }
   .next {
     right: 10%;
+  }
+  path {
+    width: 0;
+    height: 0;
   }
   @include flex(center, center, row);
   &__container {
