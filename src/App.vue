@@ -2,15 +2,17 @@
   <div id="app">
     <navbar />
     <transition name="slide" mode="out-in">
-      <router-view class="view" />
+      <router-view />
     </transition>
+    <bottom />
   </div>
 </template>
 
 <script>
+import Bottom from "./components/Footer";
 import Navbar from "./components/Navbar";
 export default {
-  components: { Navbar },
+  components: { Navbar, Bottom },
 };
 </script>
 
@@ -43,14 +45,13 @@ a {
   opacity: 0;
   transform: translateX(-40%);
 }
-.view {
-  margin-bottom: 2rem;
-}
 
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: $primary-color;
+  position: relative;
+  min-height: 100vh;
 }
 </style>

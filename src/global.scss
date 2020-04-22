@@ -65,9 +65,11 @@ $font-sizes: (
   transition: 0.1s ease-out;
   margin-right: 1rem;
   border-radius: 5%;
+  font-size: 14px;
   &:hover {
     color: #fff;
     background-color: $primary-color;
     transition: 0.1s ease-in;
+    font-size: 16px;
   }
 }
