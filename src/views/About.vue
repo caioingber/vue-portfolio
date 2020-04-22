@@ -53,8 +53,13 @@ export default {
     width: 225px;
     border-radius: 100%;
     margin-right: 1rem;
+    border: 1.5px solid $primary-color;
   }
-
+  @include large-only {
+    &__left {
+      margin-right: 3rem;
+    }
+  }
   &__right {
     @include flex(center, flex-start, column);
     width: 40%;

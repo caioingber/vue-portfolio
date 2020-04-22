@@ -87,7 +87,7 @@ export default {
   }
   &__background {
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.769);
+    background-color: rgba(255, 255, 255, 0.837);
     top: -100%;
     height: 100%;
     width: 100%;

@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <navbar />
-    <transition name="slide" mode="out-in"> <router-view /> </transition>
+    <transition name="slide" mode="out-in">
+      <router-view class="view" />
+    </transition>
   </div>
 </template>
 
@@ -40,6 +42,9 @@ a {
 .slide-leave-to {
   opacity: 0;
   transform: translateX(-40%);
+}
+.view {
+  margin-bottom: 2rem;
 }
 
 #app {
