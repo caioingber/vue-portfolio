@@ -136,12 +136,13 @@ export default {
     nextProject(e) {
       let val;
       e.preventDefault();
+      console.log(e);
       if (e.type === "click") {
-        if (e.toElement.tagName === "svg") {
+        if (e.target.nodeName === "svg") {
           val = e.target.className.baseVal;
         }
-        if (e.toElement.tagName === "path") {
-          val = e.toElement.viewportElement.className.baseVal;
+        if (e.target.nodeName === "path") {
+          val = e.target.parentNode.parentNode.className.baseVal;
         }
       }
       console.log(val);
