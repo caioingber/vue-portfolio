@@ -27,7 +27,7 @@ export default {
 
 .fa-icon {
   width: auto;
-  height: 3rem; /* or any other relative font sizes */
+  height: 3rem;
 }
 
 a {
@@ -49,9 +49,9 @@ a {
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position: relative;
   text-align: center;
   color: $primary-color;
-  position: relative;
   min-height: 100vh;
 }
 </style>

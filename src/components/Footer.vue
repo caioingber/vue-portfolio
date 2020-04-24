@@ -20,10 +20,16 @@ footer {
   text-align: left;
   padding: 1% 2%;
 }
-
+@include large-only {
+  footer {
+    position: absolute;
+    bottom: 0;
+  }
+}
 @include tablet {
   footer {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
+    padding: 2% 5%;
   }
 }
 </style>

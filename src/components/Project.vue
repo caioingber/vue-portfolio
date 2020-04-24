@@ -54,7 +54,7 @@ export default {
   min-width: 100vw;
   @include flex(center, center, column);
   .title {
-    margin-top: 50px;
+    margin-top: 20px;
     font-size: 40px;
     font-weight: 300;
   }

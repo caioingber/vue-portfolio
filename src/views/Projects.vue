@@ -6,7 +6,7 @@
       class="previous"
       data="prev"
     />
-    <div>
+    <div class="projects__window">
       <v-touch @swipeleft="leftSwipe" @swiperight="rightSwipe">
         <div class="projects__container">
           <div
@@ -201,6 +201,9 @@ export default {
     width: 100vw;
     overflow: hidden;
     @include flex(center, center);
+  }
+  &__window {
+    margin-bottom: 2rem;
   }
   &__slider {
     display: flex;

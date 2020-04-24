@@ -25,8 +25,7 @@ export default {
 
 .home {
   margin: 5rem 0 0 20%;
-  @include flex(center, flex-start, column);
-  justify-self: center;
+  @include flex(flex-start, flex-start, column);
   h1,
   h2 {
     font-weight: 300;

@@ -38,7 +38,7 @@ export default {
 @import "../global.scss";
 .navbar {
   @include flex(space-between, center);
-  height: 80px;
+  height: 70px;
   font-size: map-get($font-sizes, medium);
   font-weight: 500;
   transition: 0.5s;

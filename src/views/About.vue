@@ -47,7 +47,7 @@ export default {
 
 .about {
   margin-top: 5rem;
-  @include flex(center);
+  @include flex(center, flex-start);
   img {
     height: 225px;
     width: 225px;
@@ -75,8 +75,9 @@ export default {
       margin: 2rem 0 0.5rem 0;
     }
   }
+
   &__links {
-    margin: 2rem 0;
+    margin: 2rem 0 4rem 0;
   }
 }
 @include tablet {
