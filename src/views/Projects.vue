@@ -90,8 +90,8 @@ export default {
             "A set of atomic React Components built from a site mock.",
           stack: "React.js | CSS | Storybook",
           image: "https://i.imgur.com/CS7xEOj.png",
-          repo: "https://github.com/caioingber/simon-says",
-          deployed: "https://caioingber.github.io/simon-says/",
+          repo: "https://github.com/caioingber/component-libary",
+          deployed: "https://storybook-components-mock.netlify.app/",
         },
         {
           title: "SimonJS",
