@@ -72,8 +72,12 @@ export default {
       font-size: map-get($font-sizes, medium);
       font-weight: 300;
       text-align: left;
-      margin: 2rem 0 0.5rem 0;
+      margin-bottom: 0.5rem;
+      // margin: 2rem 0 0.5rem 0;
     }
+  }
+  &__content {
+    margin-bottom: 2rem;
   }
 
   &__links {

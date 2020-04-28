@@ -86,7 +86,7 @@ export default {
   }
   &__background {
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.837);
+    background-color: rgba(255, 255, 255, 0.865);
     top: -100%;
     height: 100%;
     width: 100%;
@@ -99,7 +99,7 @@ export default {
     margin-bottom: 20px;
   }
   &__description {
-    text-align: left;
+    // text-align: left;
     font-size: 20px;
   }
   &__stack {
