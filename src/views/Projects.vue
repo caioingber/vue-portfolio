@@ -59,13 +59,48 @@ export default {
       singleWidth: 100,
       projects: [
         {
-          title: "Eco Country Report Card",
+          title: "Recipe Rolodex",
           description:
-            "A fullstack MERN application for country demographic and ecological footprint data.",
-          stack: "React | Node.js | Express.js | MongoDB",
-          image: "https://i.imgur.com/7oG6Asa.png",
-          repo: "https://github.com/caioingber/frontend-mern",
-          deployed: "https://eco-report-card.netlify.com/",
+            "A fullstack MERN application with user authentication for sharing recipes.",
+          stack: "React.js | Node.js | Express.js | MongoDB | Passport",
+          image: "https://i.imgur.com/SAMi7Xx.png",
+          repo: "https://github.com/colleenobrien3/group-mern-frontend",
+          deployed: "https://recipe-rolodex.netlify.app/",
+        },
+        {
+          title: "CoTripper",
+          description:
+            "A large scale client application targeted towards single mothers looking to travel.",
+          stack: "Django | React.js | PostgreSQL",
+          image: "https://i.imgur.com/G3l64lw.png",
+          repo: "https://github.com/CotripperPlatform/CoTrip",
+          deployed: null,
+        },
+        {
+          title: "Python Contact Book",
+          description: "A Python command line app for storing contacts.",
+          stack: "Python | Peewee | PostgreSQL",
+          image: "https://i.imgur.com/VFtsF4l.png",
+          repo: "https://github.com/caioingber/python-contact-book",
+          deployed: null,
+        },
+        {
+          title: "Component Library",
+          description:
+            "A set of atomic React Components built from a site mock.",
+          stack: "React.js | CSS | Storybook",
+          image: "https://i.imgur.com/CS7xEOj.png",
+          repo: "https://github.com/caioingber/simon-says",
+          deployed: "https://caioingber.github.io/simon-says/",
+        },
+        {
+          title: "SimonJS",
+          description: "A remake of the classic game, Simon.",
+          stack: "HTML | CSS | Javascript",
+          image: "https://i.imgur.com/HDY3jdw.png",
+          repo: "https://github.com/caioingber/component-libary",
+          deployed:
+            "https://storybook-components-mock.netlify.app/?path=/story/form--text-with-button-large",
         },
         {
           title: "BBC News Modal",
@@ -83,30 +118,23 @@ export default {
           repo: "https://github.com/caioingber/website-mockup/",
           deployed: "https://caioingber.github.io/website-mockup/index.html",
         },
+
         {
-          title: "SimonJS",
-          description: "A remake of the classic game, Simon.",
-          stack: "HTML | CSS | Javascript",
-          image: "https://i.imgur.com/HDY3jdw.png",
-          repo: "https://github.com/caioingber/simon-says",
-          deployed: "https://caioingber.github.io/simon-says/",
+          title: "National Parks",
+          description: "A site for info on America's National Parks.",
+          stack: "Vue.js | Sass/CSS",
+          image: "https://i.imgur.com/mOanbTl.png",
+          repo: "https://github.com/caioingber/natl-parks",
+          deployed: "https://natl-parks.netlify.app/",
         },
         {
-          title: "Python Contact Book",
-          description: "A Python command line app for storing contacts.",
-          stack: "Python | PostgreSQL",
-          image: "https://i.imgur.com/VFtsF4l.png",
-          repo: "https://github.com/caioingber/python-contact-book",
-          deployed: null,
-        },
-        {
-          title: "Recipe Rolodex",
+          title: "Eco Country Report Card",
           description:
-            "A fullstack MERN application with user authentication for sharing recipes.",
-          stack: "React | Node.js | Express.js | MongoDB",
-          image: "https://i.imgur.com/SAMi7Xx.png",
-          repo: "https://github.com/colleenobrien3/group-mern-frontend",
-          deployed: "https://recipe-rolodex.netlify.app/",
+            "A fullstack MERN application for country demographic and ecological footprint data.",
+          stack: "React.js | Node.js | Express.js | MongoDB",
+          image: "https://i.imgur.com/7oG6Asa.png",
+          repo: "https://github.com/caioingber/frontend-mern",
+          deployed: "https://eco-report-card.netlify.com/",
         },
       ],
     };
@@ -203,7 +231,7 @@ export default {
     @include flex(center, center);
   }
   &__window {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
   }
   &__slider {
     display: flex;
@@ -213,7 +241,7 @@ export default {
     @include flex(center, center, row);
     span {
       cursor: pointer;
-      margin: 1rem;
+      margin: 0.7rem;
       width: 10px;
       height: 10px;
       border-radius: 100%;
