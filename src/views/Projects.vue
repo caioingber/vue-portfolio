@@ -59,6 +59,24 @@ export default {
       singleWidth: 100,
       projects: [
         {
+          title: "Eco Country Report Card",
+          description:
+            "A full stack application that scores countries based off socioeconomic and ecological data.",
+          stack: "Vue.js | SCSS | Django | PostgreSQL",
+          image: "https://i.imgur.com/hir6vyL.png",
+          repo: "https://github.com/caioingber/eco-country-client",
+          deployed: "https://eco-report-card.netlify.app/",
+        },
+        {
+          title: "SimonJS",
+          description: "A remake of the classic game, Simon.",
+          stack: "HTML | CSS | Javascript",
+          image: "https://i.imgur.com/HDY3jdw.png",
+          repo: "https://github.com/caioingber/component-libary",
+          deployed:
+            "https://storybook-components-mock.netlify.app/?path=/story/form--text-with-button-large",
+        },
+        {
           title: "Recipe Rolodex",
           description:
             "A fullstack MERN application with user authentication for sharing recipes.",
@@ -79,7 +97,7 @@ export default {
         {
           title: "Python Contact Book",
           description: "A Python command line app for storing contacts.",
-          stack: "Python | Peewee | PostgreSQL",
+          stack: "Python | Peewee ORM | PostgreSQL",
           image: "https://i.imgur.com/VFtsF4l.png",
           repo: "https://github.com/caioingber/python-contact-book",
           deployed: null,
@@ -92,15 +110,6 @@ export default {
           image: "https://i.imgur.com/CS7xEOj.png",
           repo: "https://github.com/caioingber/component-libary",
           deployed: "https://storybook-components-mock.netlify.app/",
-        },
-        {
-          title: "SimonJS",
-          description: "A remake of the classic game, Simon.",
-          stack: "HTML | CSS | Javascript",
-          image: "https://i.imgur.com/HDY3jdw.png",
-          repo: "https://github.com/caioingber/component-libary",
-          deployed:
-            "https://storybook-components-mock.netlify.app/?path=/story/form--text-with-button-large",
         },
         {
           title: "BBC News Modal",
@@ -122,19 +131,10 @@ export default {
         {
           title: "National Parks",
           description: "A site for info on America's National Parks.",
-          stack: "Vue.js | Sass/CSS",
+          stack: "Vue.js | SCSS",
           image: "https://i.imgur.com/mOanbTl.png",
           repo: "https://github.com/caioingber/natl-parks",
           deployed: "https://natl-parks.netlify.app/",
-        },
-        {
-          title: "Eco Country Report Card",
-          description:
-            "A fullstack MERN application for country demographic and ecological footprint data.",
-          stack: "React.js | Node.js | Express.js | MongoDB",
-          image: "https://i.imgur.com/7oG6Asa.png",
-          repo: "https://github.com/caioingber/frontend-mern",
-          deployed: "https://eco-report-card.netlify.com/",
         },
       ],
     };
