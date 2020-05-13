@@ -8,11 +8,17 @@
       <div class="about__content">
         <h3>About Me</h3>
         <p>
-          I am a highly-motivated and self-starting Full Stack Software Engineer
-          with a professional background in Operations. I am a natural leader
-          with a track record of consistently exceeding metrics in a
-          cross-functional organization. I am passionate about user-centric
-          approaches to web development.
+          I am a highly-motivated and self-starting Full Stack Software
+          Engineer. My professional background in Operations and Customer
+          Support has introduced an empathetic approach to my code. I try to
+          find the root of the problem and thrive to apply a user-centric
+          approach to my code. I thrive in cross-functional, collaborative
+          environments and am consistenly on the hunt for new skills and
+          technologies to master.
+        </p>
+        <p>
+          When I'm not coding, I enjoy hiking, camping, playing music or
+          binge-watching whatever new content HBO has to offer.
         </p>
       </div>
       <div class="about__skills">
@@ -66,14 +72,13 @@ export default {
     p {
       text-align: justify;
       line-height: 1.5;
-      // margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
     }
     h3 {
       font-size: map-get($font-sizes, medium);
       font-weight: 300;
       text-align: left;
-      margin-bottom: 0.5rem;
-      // margin: 2rem 0 0.5rem 0;
+      margin-bottom: 1rem;
     }
   }
   &__content {
