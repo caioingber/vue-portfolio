@@ -72,9 +72,8 @@ export default {
           description: "A remake of the classic game, Simon.",
           stack: "HTML | CSS | Javascript",
           image: "https://i.imgur.com/HDY3jdw.png",
-          repo: "https://github.com/caioingber/component-libary",
-          deployed:
-            "https://storybook-components-mock.netlify.app/?path=/story/form--text-with-button-large",
+          repo: "https://github.com/caioingber/simon-says",
+          deployed: "https://caioingber.github.io/simon-says/",
         },
         {
           title: "Recipe Rolodex",
@@ -164,7 +163,6 @@ export default {
     nextProject(e) {
       let val;
       e.preventDefault();
-      console.log(e);
       if (e.type === "click") {
         if (e.target.nodeName === "svg") {
           val = e.target.className.baseVal;
@@ -173,7 +171,6 @@ export default {
           val = e.target.parentNode.parentNode.className.baseVal;
         }
       }
-      console.log(val);
       if (e.keyCode == 37 || val === "previous fa-icon") {
         if (this.currentIndex <= 0) {
           this.currentIndex = this.projects.length - 1;

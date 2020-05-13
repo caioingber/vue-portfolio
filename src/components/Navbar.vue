@@ -7,7 +7,7 @@
       <router-link to="/about">About</router-link>
       <router-link to="/projects">Projects</router-link>
       <a
-        href="/assets/Portfolio_Resume.pdf"
+        href="/assets/Caio_Ingber_Resume.pdf"
         target="_blank"
         class="navbar__resume"
         >Resume</a

@@ -4,7 +4,7 @@
     <h2>Software Engineer</h2>
     <div class="home__links">
       <router-link to="/about" class="button">About Me</router-link>
-      <a href="/assets/Resume_Portfolio.pdf" target="_blank" class="button"
+      <a href="/assets/Caio_Ingber_Resume.pdf" target="_blank" class="button"
         >Resume</a
       >
     </div>
